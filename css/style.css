@@ -1,7 +1,6 @@
 /* Estilos generales */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +12,6 @@ body {
   overflow-x: hidden; /* Evitar el desbordamiento horizontal */
 }
 
-
 .wrapper {
   width: 100vw;
   height: 100vh;
@@ -21,35 +19,30 @@ body {
   color: #ffffff;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; /* Alinear verticalmente los elementos */
+/* Navbar Bootstrap personalizado */
+.navbar-custom {
+  background-color: #191c32;
   padding: 2em;
   transition: all 0.3s ease; /* Transición para el contenedor */
 }
+.navbar a{
+  color: #fff;
+}
 
-.brand {
+.navbar-brand {
   margin-top: -7px;
 }
 
-.brand span {
+.navbar-brand span {
   color: #ff7f7f; /* Cambiado a rojo clarito */
 }
 
-.menu {
-  display: flex;
-  justify-content: flex-end; /* Alinear el menú a la derecha */
-  gap: 15px; /* Reducir el espacio entre los elementos del menú */
-  flex-wrap: wrap; /* Permitir que los elementos se envuelvan si es necesario */
-}
-
-.menu li {
+.navbar-nav .nav-item {
   list-style: none;
   transition: transform 0.3s ease; /* Transición para los elementos del menú */
 }
 
-.menu a {
+.navbar-nav .nav-link {
   color: #ffffff; /* Ajustar el color de los enlaces del menú */
   text-decoration: none;
   padding: 5px 15px; /* Reducir el padding */
@@ -57,26 +50,32 @@ body {
   font-weight: 700; /* Poner el texto en negrita */
   transition: color 0.4s ease, background-color 0.3s ease; /* Transición para color y fondo */
   border-radius: 20px;
+  margin: 1vw;
 }
 
-.menu li:hover a {
+.navbar-nav .nav-item:hover .nav-link {
   background-color: rgba(255, 127, 127, 0.8); /* Cambiado a rojo clarito */
-  color: #000; /* Ajustar el color del texto en hover */
+  color: #000000; /* Ajustar el color del texto en hover */
   border-radius: 20px;
 }
 
-.menu .active {
+.navbar-nav .nav-link.active {
   color: #ffffff;
 }
 
-.menu li a:hover {
-  color: #000; /* Ajustar el color del texto en hover */
-}
-
-.menu li:hover {
+.navbar-nav .nav-item:hover {
   transform: scale(1.2); /* Agranda las opciones del menú */
 }
 
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Estilos para otras secciones */
 .main {
   margin: 0 auto;
   width: 80vw;
@@ -88,7 +87,6 @@ body {
   background-color: #191c32; /* Fondo oscuro para la sección principal */
   padding: 20px; /* Espacio interno para la sección principal */
 }
-
 
 h1 {
   font-size: 2.5em;
@@ -136,7 +134,7 @@ h1 {
 }
 
 .about img {
-  width: 100%;
+  width: 90%;
   grid-column: 1/5;
 }
 
@@ -174,6 +172,7 @@ h1 {
 
 .portfolio-heading {
   width: 100vw;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -187,8 +186,7 @@ h1 {
 }
 
 .portfolio .container {
-  width: 80vw;
-  height: auto;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -197,9 +195,9 @@ h1 {
 }
 
 .card {
-  width: 100%; /* Ajustar el ancho de las tarjetas para pantallas pequeñas */
+  width: calc(50% - 2em); /* Ajustar el ancho de las tarjetas para pantallas pequeñas */
   background-color: #2b3058;
-  margin: 1em 0;
+  margin: 1em;
 }
 
 .card__img {
@@ -252,7 +250,7 @@ h1 {
 }
 
 .contact-section img {
-  width: 100%;
+  width: 55%;
   height: auto;
   opacity: 0.3; /* Ajustar la opacidad */
   margin: 20px;
@@ -282,27 +280,53 @@ h1 {
   color: #fff;
 }
 
-.form-group .btn-submit {
-  padding: 10px 20px;
-  margin: 1em;
-  border-radius: 20px;
-  border: none;
-  text-transform: uppercase;
-  background-color: #ff7f7f; 
+.form-group .input:focus,
+.form-group textarea:focus {
+  outline: none;
 }
 
-/* Estilos para el footer */
+.form-group label {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  text-transform: uppercase;
+  background-color: rgba(255, 127, 127, 0.8); 
+  border: none;
+  border-radius: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  -webkit-box-shadow: 1px 3px 20px -5px rgba(255, 127, 127, 0.69); 
+  -moz-box-shadow: 1px 3px 11px -5px rgba(255, 127, 127, 0.69); 
+  box-shadow: 1px 3px 11px -5px rgba(255, 127, 127, 0.69); 
+  font-weight: bold;
+}
+
+.submit-button:hover {
+  background-color: rgba(255, 127, 127, 0.8);
+  box-shadow: none;
+  color: #000000; 
+  transform: scale(1.2);
+  font-weight: bold;
+}
+
 .footer {
+  width: 100vw;
+  height: 150px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 200px;
+  justify-content: center;
+  background-color: rgba(255, 127, 127, 0.8);
   padding: 2em;
-  background-color: #ff7f7f; 
+  color: rgb(0, 0, 0);
 }
 
+.footer p {
+  font-weight: bold;
+}
 .footer-content h2 {
   font-size: 3em;
 }
@@ -311,7 +335,6 @@ h1 {
   font-size: 1.5em;
   text-align: center;
 }
-
 .social-networks {
   display: flex;
   justify-content: space-evenly;
@@ -330,177 +353,67 @@ h1 {
 }
 
 
-/* Media Queries */
 
-/* Pequeños dispositivos (teléfonos, menos de 768px) */
+.contact {
+  width: 40vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.contact a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.contact a:hover {
+  transform: scale(1.2);
+}
+
+/* Media queries */
 @media (max-width: 767px) {
-  .navbar {
+  .navbar-custom {
     padding: 1em;
-    font-size: 2vw;
   }
 
-  .menu {
+  .navbar-nav {
     width: 90%;
   }
 
+  .navbar-nav .nav-link {
+    padding: 10px 15px;
+  }
+
   .main {
-    grid-template-columns: 1fr;
-    text-align: center;
-    margin-top: 20px; /* Espacio arriba de la imagen */
+    grid-template-columns: 1fr; /* Cambiar a una columna en pantallas pequeñas */
   }
 
   .main img {
-    width: 50%; /* Ajustar el ancho de la imagen principal en pantallas pequeñas */
-    height: auto; /* Mantener la proporción de la imagen */
-    margin: 0 auto; /* Centrar la imagen */
-    margin-top: 10vw;
+    width: 25vw; /* Ajustar el ancho de la imagen principal en pantallas pequeñas */
   }
-  .about img {
-    width: 110%;
-    height: auto;
-    grid-column: 1/5;
-  }
-  .portfolio .container {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px; /* Espacio arriba de las tarjetas */
+
+  .portfolio-heading h2,
+  .contact-heading h2 {
+    font-size: 2em;
   }
 
   .card {
-    width: 80%; /* Ajustar el ancho de las tarjetas en pantallas pequeñas */
-    margin-bottom: 20px; /* Espacio entre las tarjetas */
+    width: 100%; /* Ajustar el ancho de las tarjetas en pantallas pequeñas */
   }
-  .contact-section {
-    padding: 3em;
-  }
-  
+
   .container-contact {
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap; /* Asegurar que el contenido se ajuste en pantallas pequeñas */
-  }
-  
-  .contact-section img {
-    width: 55%;
-    height: auto;
-    opacity: 0.3; /* Ajustar la opacidad */
-    margin: 20px;
-  }
-  .footer{
-    font-size: 3vh;
-  }
-}
-
-/* Dispositivos medianos (tabletas, 768px y más) */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .navbar {
-    padding: 2em;
+    flex-direction: column; /* Asegurar que el contenido se apile en pantallas pequeñas */
   }
 
-  .menu {
-    width: 80%;
+  .about {
+    grid-template-columns: 1fr; /* Cambiar a una columna en pantallas pequeñas */
+  }
+
+  .about img {
+    grid-column: 1 / -1; /* Asegurar que la imagen ocupe toda la fila */
+    width: 30vw;
     height: auto;
   }
-
-  .main {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .main img {
-    width: 100%;
-    height: auto;
-    max-width: 120%;
-  }
-
-  .about,
-  .portfolio .container {
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .about-info {
-    padding: 4em;
-  }
-
-  .portfolio .card {
-    flex: 0 0 calc(50% - 2em);
-    margin: 1em;
-  }
-  .contact-section {
-    padding: 3em;
-  }
-  
-  .container-contact {
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap; /* Asegurar que el contenido se ajuste en pantallas pequeñas */
-  }
-  
-  .contact-section img {
-    width: 50%;
-    height: auto;
-    opacity: 0.3; /* Ajustar la opacidad */
-    margin: 20px;
-  }
-}
-
-/* Grandes dispositivos (escritorios, 1024px y más) */
-@media (min-width: 1024px) {
-  .navbar {
-    padding: 2em;
-  }
-
-  .menu {
-    width: 75%;
-  }
-
-  .main {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .main img {
-    width: 70%;
-    height: auto;
-    max-width: 100%;
-  }
-
-  .about,
-  .portfolio .container {
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .about-info {
-    grid-column: 5/10;
-    padding: 3em;
-  }
-
-  .portfolio .card {
-    flex: 0 0 calc(33.33% - 2em);
-    margin: 1em;
-  }
-  .contact-section {
-    padding: 3em;
-  }
-  
-  .container-contact {
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap; /* Asegurar que el contenido se ajuste en pantallas pequeñas */
-  }
-  
-  .contact-section img {
-    width: 50%;
-    height: auto;
-    opacity: 0.3; /* Ajustar la opacidad */
-    margin: 40px;
-    margin-right: 10%;
-  }
-
 }
