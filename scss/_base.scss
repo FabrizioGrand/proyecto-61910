@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden; /* Evitar el desbordamiento horizontal */
+  }
+  .wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: #191c32;
+    color: #ffffff;
+  }
+.main {
+    width: 80vw;
+    height: 70vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1,5em;
+    background-color: #191c32; /* Fondo oscuro para la sección principal */
+    padding: 20px; /* Espacio interno para la sección principal */
+    margin-left: 9rem;
+    img {
+        width: 20vw; /* Ajustar el ancho de la imagen principal */
+        height: auto; /* Mantener la proporción de la imagen */
+        margin: 0 auto; /* Centrar la imagen */
+        display: block; /* Asegurar que la imagen sea un elemento de bloque */
+      }
+  }
+  h1 {
+    font-size: 2.5em;
+    padding: 4px;
+  }
+  .info-content span {
+    color: rgba(255, 127, 127, 0.8);
+  }
+  .button-content {
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+  }
+  
+  .project-details-button a {
+    text-decoration: none;
+    color: #000000;
+  }

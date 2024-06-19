@@ -1,0 +1,22 @@
+
+.download-cv {
+    padding: 10px 20px;
+    text-transform: uppercase;
+    background-color:rgba(255, 127, 127, 0.8); 
+    border: none;
+    border-radius: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    -webkit-box-shadow: 1px 3px 20px -5px rgba(255, 127, 127, 0.69); 
+    -moz-box-shadow: 1px 3px 11px -5px rgba(255, 127, 127, 0.69); 
+    box-shadow: 1px 3px 11px -5px rgba(255, 127, 127, 0.69); 
+    font-weight: bold;
+  }
+  
+  .download-cv:hover {
+    background-color: rgba(255, 127, 127, 0.8);
+    box-shadow: none;
+    color: #000000; 
+    transform: scale(1.2);
+    font-weight: bold;
+  }

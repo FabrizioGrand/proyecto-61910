@@ -1,0 +1,32 @@
+
+.card {
+    width: calc(50% - 2em); /* Ajustar el ancho de las tarjetas para pantallas pequeñas */
+    background-color: #2b3058;
+    margin: 1em;
+  }
+  
+  .card__img {
+    width: 100%;
+    height: 150px;
+    background-image: url(https://res.cloudinary.com/freelancer2222222222222222/image/upload/v1650543491/samples/2-original_agisst.png);
+    background-size: cover;
+  }
+  
+  .card__title {
+    padding: 20px;
+    color: white;
+  }
+  
+  .card__proyect-links {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .card__proyect-links a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .card__proyect-links i {
+    font-size: 1.5em;
+  }

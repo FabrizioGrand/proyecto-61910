@@ -1,6 +1,6 @@
-/* Estilos generales */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
+@charset "UTF-8";
+/*import archivo base*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +8,7 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   overflow-x: hidden; /* Evitar el desbordamiento horizontal */
 }
 
@@ -19,13 +19,94 @@ body {
   color: #ffffff;
 }
 
+.main {
+  width: 80vw;
+  height: 70vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1, 5em;
+  background-color: #191c32; /* Fondo oscuro para la sección principal */
+  padding: 20px; /* Espacio interno para la sección principal */
+  margin-left: 9rem;
+}
+.main img {
+  width: 20vw; /* Ajustar el ancho de la imagen principal */
+  height: auto; /* Mantener la proporción de la imagen */
+  margin: 0 auto; /* Centrar la imagen */
+  display: block; /* Asegurar que la imagen sea un elemento de bloque */
+}
+
+h1 {
+  font-size: 2.5em;
+  padding: 4px;
+}
+
+.info-content span {
+  color: rgba(255, 127, 127, 0.8);
+}
+
+.button-content {
+  display: flex;
+  justify-content: center;
+  margin: 1em;
+}
+
+.project-details-button a {
+  text-decoration: none;
+  color: #000000;
+}
+
+/*import componentes*/
+.footer {
+  width: 100vw;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 127, 127, 0.8);
+  padding: 2em;
+  color: rgb(0, 0, 0);
+}
+
+.footer p {
+  font-weight: bold;
+}
+
+.footer-content h2 {
+  font-size: 2.5em;
+}
+
+.footer-content h5 {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.social-networks {
+  display: flex;
+  justify-content: space-evenly;
+  width: 300px;
+  margin-top: 1em;
+}
+
+.social-networks a {
+  color: black; /* Cambia el color de los íconos a negro */
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+
+.social-networks i {
+  font-size: 1.5em;
+  color: inherit; /* Asegura que los íconos hereden el color del enlace */
+}
+
 /* Navbar Bootstrap personalizado */
 .navbar-custom {
   background-color: #191c32;
   padding: 2em;
   transition: all 0.3s ease; /* Transición para el contenedor */
 }
-.navbar a{
+
+.navbar a {
   color: #fff;
 }
 
@@ -75,94 +156,42 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
-/* Estilos para otras secciones */
-.main {
-  margin: 0 auto;
-  width: 80vw;
-  height: 80vh;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  gap: 2em;
-  background-color: #191c32; /* Fondo oscuro para la sección principal */
-  padding: 20px; /* Espacio interno para la sección principal */
+/* Media queries */
+@media (max-width: 767px) {
+  .navbar-custom {
+    padding: 1em;
+  }
+  .navbar-nav {
+    width: 90%;
+  }
+  .navbar-nav .nav-link {
+    padding: 10px 15px;
+  }
+  .main {
+    grid-template-columns: 1fr; /* Cambiar a una columna en pantallas pequeñas */
+  }
+  .main img {
+    width: 25vw; /* Ajustar el ancho de la imagen principal en pantallas pequeñas */
+  }
+  .portfolio-heading h2,
+  .contact-heading h2 {
+    font-size: 2em;
+  }
+  .card {
+    width: 100%; /* Ajustar el ancho de las tarjetas en pantallas pequeñas */
+  }
+  .container-contact {
+    flex-direction: column; /* Asegurar que el contenido se apile en pantallas pequeñas */
+  }
+  .about {
+    grid-template-columns: 1fr; /* Cambiar a una columna en pantallas pequeñas */
+  }
+  .about img {
+    grid-column: 1/-1; /* Asegurar que la imagen ocupe toda la fila */
+    width: 30vw;
+    height: auto;
+  }
 }
-
-h1 {
-  font-size: 2.5em;
-  padding: 4px;
-}
-
-.info-content span {
-  color: #ff7f7f;
-}
-
-.download-cv {
-  padding: 10px 20px;
-  text-transform: uppercase;
-  background-color:rgba(255, 127, 127, 0.8); 
-  border: none;
-  border-radius: 20px;
-  margin-top: 20px;
-  cursor: pointer;
-  -webkit-box-shadow: 1px 3px 20px -5px rgba(255, 127, 127, 0.69); 
-  -moz-box-shadow: 1px 3px 11px -5px rgba(255, 127, 127, 0.69); 
-  box-shadow: 1px 3px 11px -5px rgba(255, 127, 127, 0.69); 
-  font-weight: bold;
-}
-
-.download-cv:hover {
-  background-color: rgba(255, 127, 127, 0.8);
-  box-shadow: none;
-  color: #000000; 
-  transform: scale(1.2);
-  font-weight: bold;
-}
-
-.main img {
-  width: 20vw; /* Ajustar el ancho de la imagen principal */
-  height: auto; /* Mantener la proporción de la imagen */
-  margin: 0 auto; /* Centrar la imagen */
-  display: block; /* Asegurar que la imagen sea un elemento de bloque */
-}
-
-.about {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  width: 100vw;
-  align-items: center;
-}
-
-.about img {
-  width: 90%;
-  grid-column: 1/5;
-}
-
-.about-info {
-  grid-column: 5/10;
-  padding: 3em;
-}
-
-.about-info h2 {
-  font-size: 2em;
-  color: #191c32;
-}
-
-.divider {
-  height: 4px;
-  width: 60px;
-  background-color: #ff7f7f; 
-  margin-top: 5px;
-  margin-bottom: 2em;
-  margin-left: 5px;
-}
-
-.about p {
-  margin-bottom: 1em;
-  color: #191c32;
-  font-weight: bold;
-}
-
 .portfolio,
 .contact-section {
   width: 100vw;
@@ -192,68 +221,6 @@ h1 {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-}
-
-.card {
-  width: calc(50% - 2em); /* Ajustar el ancho de las tarjetas para pantallas pequeñas */
-  background-color: #2b3058;
-  margin: 1em;
-}
-
-.card__img {
-  width: 100%;
-  height: 150px;
-  background-image: url(https://res.cloudinary.com/freelancer2222222222222222/image/upload/v1650543491/samples/2-original_agisst.png);
-  background-size: cover;
-}
-
-.card__title {
-  padding: 20px;
-  color: white;
-}
-
-.card__proyect-links {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.card__proyect-links a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.card__proyect-links i {
-  font-size: 1.5em;
-}
-
-.button-content {
-  display: flex;
-  justify-content: center;
-  margin: 1em;
-}
-
-.project-details-button a {
-  text-decoration: none;
-  color: #000000;
-}
-
-.contact-section {
-  padding: 3em;
-}
-
-.container-contact {
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap; /* Asegurar que el contenido se ajuste en pantallas pequeñas */
-}
-
-.contact-section img {
-  width: 55%;
-  height: auto;
-  opacity: 0.3; /* Ajustar la opacidad */
-  margin: 20px;
 }
 
 .form-group {
@@ -293,66 +260,65 @@ h1 {
 .submit-button {
   padding: 10px 20px;
   text-transform: uppercase;
-  background-color: rgba(255, 127, 127, 0.8); 
+  background-color: rgba(255, 127, 127, 0.8);
   border: none;
   border-radius: 20px;
   margin-top: 20px;
   cursor: pointer;
-  -webkit-box-shadow: 1px 3px 20px -5px rgba(255, 127, 127, 0.69); 
-  -moz-box-shadow: 1px 3px 11px -5px rgba(255, 127, 127, 0.69); 
-  box-shadow: 1px 3px 11px -5px rgba(255, 127, 127, 0.69); 
+  -webkit-box-shadow: 1px 3px 20px -5px rgba(255, 127, 127, 0.69);
+  -moz-box-shadow: 1px 3px 11px -5px rgba(255, 127, 127, 0.69);
+  box-shadow: 1px 3px 11px -5px rgba(255, 127, 127, 0.69);
   font-weight: bold;
 }
 
 .submit-button:hover {
   background-color: rgba(255, 127, 127, 0.8);
   box-shadow: none;
-  color: #000000; 
+  color: #000000;
   transform: scale(1.2);
   font-weight: bold;
 }
 
-.footer {
-  width: 100vw;
-  height: 150px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.download-cv {
+  padding: 10px 20px;
+  text-transform: uppercase;
   background-color: rgba(255, 127, 127, 0.8);
-  padding: 2em;
-  color: rgb(0, 0, 0);
-}
-
-.footer p {
+  border: none;
+  border-radius: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  -webkit-box-shadow: 1px 3px 20px -5px rgba(255, 127, 127, 0.69);
+  -moz-box-shadow: 1px 3px 11px -5px rgba(255, 127, 127, 0.69);
+  box-shadow: 1px 3px 11px -5px rgba(255, 127, 127, 0.69);
   font-weight: bold;
 }
-.footer-content h2 {
-  font-size: 2.5em;
+
+.download-cv:hover {
+  background-color: rgba(255, 127, 127, 0.8);
+  box-shadow: none;
+  color: #000000;
+  transform: scale(1.2);
+  font-weight: bold;
 }
 
-.footer-content h5 {
-  font-size: 1.5em;
-  text-align: center;
+.contact-section {
+  padding: 3em;
 }
-.social-networks {
+
+.container-contact {
+  margin: 0 auto;
   display: flex;
-  justify-content: space-evenly;
-  width: 300px;
-  margin-top: 1em;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* Asegurar que el contenido se ajuste en pantallas pequeñas */
 }
 
-.social-networks a {
-  color: black; /* Cambia el color de los íconos a negro */
-  text-decoration: none; /* Elimina el subrayado de los enlaces */
+.contact-section img {
+  width: 55%;
+  height: auto;
+  opacity: 0.3; /* Ajustar la opacidad */
+  margin: 20px;
 }
-
-.social-networks i {
-  font-size: 1.5em;
-  color: inherit; /* Asegura que los íconos hereden el color del enlace */
-}
-
-
 
 .contact {
   width: 40vw;
@@ -372,48 +338,73 @@ h1 {
   transform: scale(1.2);
 }
 
-/* Media queries */
-@media (max-width: 767px) {
-  .navbar-custom {
-    padding: 1em;
-  }
-
-  .navbar-nav {
-    width: 90%;
-  }
-
-  .navbar-nav .nav-link {
-    padding: 10px 15px;
-  }
-
-  .main {
-    grid-template-columns: 1fr; /* Cambiar a una columna en pantallas pequeñas */
-  }
-
-  .main img {
-    width: 25vw; /* Ajustar el ancho de la imagen principal en pantallas pequeñas */
-  }
-
-  .portfolio-heading h2,
-  .contact-heading h2 {
-    font-size: 2em;
-  }
-
-  .card {
-    width: 100%; /* Ajustar el ancho de las tarjetas en pantallas pequeñas */
-  }
-
-  .container-contact {
-    flex-direction: column; /* Asegurar que el contenido se apile en pantallas pequeñas */
-  }
-
-  .about {
-    grid-template-columns: 1fr; /* Cambiar a una columna en pantallas pequeñas */
-  }
-
-  .about img {
-    grid-column: 1 / -1; /* Asegurar que la imagen ocupe toda la fila */
-    width: 30vw;
-    height: auto;
-  }
+.card {
+  width: calc(50% - 2em); /* Ajustar el ancho de las tarjetas para pantallas pequeñas */
+  background-color: #2b3058;
+  margin: 1em;
 }
+
+.card__img {
+  width: 100%;
+  height: 150px;
+  background-image: url(https://res.cloudinary.com/freelancer2222222222222222/image/upload/v1650543491/samples/2-original_agisst.png);
+  background-size: cover;
+}
+
+.card__title {
+  padding: 20px;
+  color: white;
+}
+
+.card__proyect-links {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card__proyect-links a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.card__proyect-links i {
+  font-size: 1.5em;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  width: 100vw;
+  align-items: center;
+}
+
+.about img {
+  width: 90%;
+  grid-column: 1/5;
+}
+
+.about-info {
+  grid-column: 5/10;
+  padding: 3em;
+}
+
+.about-info h2 {
+  font-size: 2em;
+  color: #191c32;
+}
+
+.divider {
+  height: 4px;
+  width: 60px;
+  background-color: #ff7f7f;
+  margin-top: 5px;
+  margin-bottom: 2em;
+  margin-left: 5px;
+}
+
+.about p {
+  margin-bottom: 1em;
+  color: #191c32;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=style.css.map */
