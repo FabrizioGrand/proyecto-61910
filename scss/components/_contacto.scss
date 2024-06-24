@@ -1,35 +1,33 @@
+.contact {
+  width: 40vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+  a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
 .contact-section {
-    padding: 3em;
-  }
-  
-  .container-contact {
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap; /* Asegurar que el contenido se ajuste en pantallas pequeñas */
-  }
-  
-  .contact-section img {
+  padding: 3em;
+  img {
     width: 55%;
     height: auto;
     opacity: 0.3; /* Ajustar la opacidad */
     margin: 20px;
   }
-  .contact {
-    width: 40vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    list-style: none;
-  }
-  
-  .contact a {
-    color: #ffffff;
-    text-decoration: none;
-    transition: transform 0.3s ease;
-  }
-  
-  .contact a:hover {
-    transform: scale(1.2);
-  }
+}
+
+.container-contact {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* Asegurar que el contenido se ajuste en pantallas pequeñas */
+}

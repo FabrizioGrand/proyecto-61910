@@ -1,16 +1,21 @@
-* {
+  $colorfondo:#191c32;
+  $colordetalles:rgba(255, 127, 127, 0.8);
+  $colorcard:#2b3058;
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
+
 body {
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden; /* Evitar el desbordamiento horizontal */
+    background-color: $colorfondo;
   }
   .wrapper {
     width: 100vw;
     height: 100vh;
-    background-color: #191c32;
+    background-color:$colorfondo;
     color: #ffffff;
     
   }
@@ -20,7 +25,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1,5em;
-    background-color: #191c32; /* Fondo oscuro para la sección principal */
+    background-color: $colorfondo; /* Fondo oscuro para la sección principal */
     padding: 20px; /* Espacio interno para la sección principal */
     margin-left: 9rem;
     img {
@@ -35,7 +40,7 @@ body {
     padding: 4px;
   }
   .info-content span {
-    color: rgba(255, 127, 127, 0.8);
+    color:$colordetalles;
   }
   .button-content {
     display: flex;
@@ -46,4 +51,12 @@ body {
   .project-details-button a {
     text-decoration: none;
     color: #000000;
+  }
+  .divider {
+    height: 4px;
+    width: 60px;
+    background-color: $colordetalles; 
+    margin-top: 5px;
+    margin-bottom: 2em;
+    margin-left: 5px;
   }
