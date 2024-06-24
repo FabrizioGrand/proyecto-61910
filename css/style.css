@@ -244,17 +244,15 @@ h1 {
 }
 
 .gallery-item {
-  overflow: hidden; /* Oculta partes de la imagen que excedan el tamaño del contenedor */
-  border-radius: 8px; /* Bordes redondeados */
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> sass
 .gallery-item img {
-  width: 100%; /* Imagen ocupa todo el espacio disponible */
-  height: 100%; /* Imagen ocupa todo el espacio disponible */
-  object-fit: cover; /* Cubre el contenedor sin distorsionar la imagen */
+  display: block;
+  width: 100%;
+  height: 20rem;
+  border-radius: 10px;
 }
 
 .wrapper2 {
@@ -276,22 +274,6 @@ h1 {
   color: white;
   font-size: 1.5rem;
   font-weight: bold;
-}
-
-.gallery-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-}
-<<<<<<< HEAD
-
-=======
->>>>>>> sass
-.gallery-item img {
-  display: block;
-  width: 100%;
-  height: 20rem;
-  border-radius: 10px;
 }
 
 .form-group {
