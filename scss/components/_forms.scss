@@ -4,16 +4,18 @@
     flex-direction: column;
     width: 100%;
     margin-top: 2em;
-  }
-  
-  .form-group textarea {
-    height: 150px;
-    padding: 1.5em;
-    background: none;
-    border: 1px solid #fff;
-    color: #fff;
-  }
-  
+    textarea {
+      height: 150px;
+      padding: 1.5em;
+      background: none;
+      border: 1px solid #fff;
+      color: #fff;
+    }
+    label {
+      font-size: 1em;
+      font-weight: bold;
+    }
+  }  
   .form-group .input {
     padding: 10px 20px;
     margin-bottom: 1em;
@@ -26,31 +28,24 @@
   .form-group .input:focus,
   .form-group textarea:focus {
     outline: none;
-  }
-  
-  .form-group label {
-    font-size: 1em;
-    font-weight: bold;
-  }
-  
+  }  
   .submit-button {
     padding: 10px 20px;
     text-transform: uppercase;
-    background-color: rgba(255, 127, 127, 0.8); 
+    background-color: $colordetalles; 
     border: none;
     border-radius: 20px;
     margin-top: 20px;
     cursor: pointer;
-    -webkit-box-shadow: 1px 3px 20px -5px rgba(255, 127, 127, 0.69); 
-    -moz-box-shadow: 1px 3px 11px -5px rgba(255, 127, 127, 0.69); 
-    box-shadow: 1px 3px 11px -5px rgba(255, 127, 127, 0.69); 
+    -webkit-box-shadow: 1px 3px 20px -5px $colordetalles; 
+    -moz-box-shadow: 1px 3px 11px -5px $colordetalles; 
+    box-shadow: 1px 3px 11px -5px $colordetalles; 
     font-weight: bold;
-  }
-  
-  .submit-button:hover {
-    background-color: rgba(255, 127, 127, 0.8);
-    box-shadow: none;
-    color: #000000; 
-    transform: scale(1.2);
-    font-weight: bold;
+    &:hover{
+      background-color: $colordetalles;
+      box-shadow: none;
+      color: #000000; 
+      transform: scale(1.2);
+      font-weight: bold;
+    }
   }

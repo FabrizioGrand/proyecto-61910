@@ -14,17 +14,14 @@
   
     .main {
       grid-template-columns: 1fr; /* Cambiar a una columna en pantallas pequeñas */
-    }
-  
-    .main img {
-      width: 25vw; /* Ajustar el ancho de la imagen principal en pantallas pequeñas */
-    }
-  
+      img {
+        width: 25vw; /* Ajustar el ancho de la imagen principal en pantallas pequeñas */
+      }
+    }  
     .portfolio-heading h2,
     .contact-heading h2 {
       font-size: 2em;
     }
-  
     .card {
       width: 100%; /* Ajustar el ancho de las tarjetas en pantallas pequeñas */
     }
@@ -35,11 +32,10 @@
   
     .about {
       grid-template-columns: 1fr; /* Cambiar a una columna en pantallas pequeñas */
-    }
-  
-    .about img {
-      grid-column: 1 / -1; /* Asegurar que la imagen ocupe toda la fila */
-      width: 30vw;
-      height: auto;
+      img {
+        grid-column: 1 / -1; /* Asegurar que la imagen ocupe toda la fila */
+        width: 30vw;
+        height: auto;
+      }
     }
 }

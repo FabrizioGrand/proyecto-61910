@@ -1,7 +1,7 @@
 
 .card {
     width: calc(50% - 2em); /* Ajustar el ancho de las tarjetas para pantallas pequeñas */
-    background-color: #2b3058;
+    background-color: $colorcard;
     margin: 1em;
   }
   
@@ -20,13 +20,11 @@
   .card__proyect-links {
     display: flex;
     justify-content: space-evenly;
-  }
-  
-  .card__proyect-links a {
-    color: #ffffff;
-    text-decoration: none;
-  }
-  
-  .card__proyect-links i {
-    font-size: 1.5em;
+    a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+    i {
+      font-size: 1.5em;
+    }
   }
