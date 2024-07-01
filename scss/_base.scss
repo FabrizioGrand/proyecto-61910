@@ -14,7 +14,7 @@ body {
   }
   .wrapper {
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
     background-color:$colorfondo;
     color: #ffffff;
   }
@@ -25,14 +25,15 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 1,5em;
     background-color: $colorfondo; /* Fondo oscuro para la sección principal */
-    padding: 20px; /* Espacio interno para la sección principal */
-    margin-left: 9rem;
+    padding: 60px; /* Espacio interno para la sección principal */
+    margin-left: 15%;
     img {
-        width: 20vw; /* Ajustar el ancho de la imagen principal */
-        height: auto; /* Mantener la proporción de la imagen */
-        margin: 0 auto; /* Centrar la imagen */
-        display: block; /* Asegurar que la imagen sea un elemento de bloque */
-      }
+      width: 20vw; /* Ajustar el ancho de la imagen principal */
+      height: auto; /* Mantener la proporción de la imagen */
+      margin: 0 auto; /* Centrar la imagen */
+      padding-top: 15px;
+      display: block; /* Asegurar que la imagen sea un elemento de bloque */
+    }
   }
   h1 {
     font-size: 2.5em;
