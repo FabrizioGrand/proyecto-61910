@@ -15,7 +15,7 @@
     .main {
       grid-template-columns: 1fr; /* Cambiar a una columna en pantallas pequeñas */
       img {
-        width: 25vw; /* Ajustar el ancho de la imagen principal en pantallas pequeñas */
+        width: 30vw; /* Ajustar el ancho de la imagen principal en pantallas pequeñas */
       }
     }  
     .portfolio-heading h2,
@@ -25,6 +25,13 @@
     .card {
       width: 100%; /* Ajustar el ancho de las tarjetas en pantallas pequeñas */
     }
+    .card__title {
+      padding: 20px;
+      color: white;
+      h2{
+        font-size: 1rem;
+      }
+    }
   
     .container-contact {
       flex-direction: column; /* Asegurar que el contenido se apile en pantallas pequeñas */
@@ -32,10 +39,12 @@
   
     .about {
       grid-template-columns: 1fr; /* Cambiar a una columna en pantallas pequeñas */
+      font-size: 0.6rem;
       img {
         grid-column: 1 / -1; /* Asegurar que la imagen ocupe toda la fila */
         width: 30vw;
         height: auto;
+        margin-left: 10px;
       }
     }
 }
