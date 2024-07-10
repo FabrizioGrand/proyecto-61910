@@ -1,35 +1,35 @@
 /* Estilos para el footer */
 .footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 200px;
-    padding: 2em;
-    background-color: $colordetalles; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 200px;
+  padding: 2em;
+  background-color: $colordetalles; 
+}
+
+.footer-content {
+  h2 {
+    font-size: 3em;
+ }  
+ h5 {
+  font-size: 1.5em;
+  text-align: center;
+}
+}  
+.social-networks {
+  display: flex;
+  justify-content: space-evenly;
+  width: 300px;
+  margin-top: 1em;
+  a {
+    color: black; /* Cambia el color de los íconos a negro */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
   }
-  
-  .footer-content {
-    h2 {
-      font-size: 3em;
-   }  
-   h5 {
+  i {
     font-size: 1.5em;
-    text-align: center;
+    color: inherit; /* Asegura que los íconos hereden el color del enlace */
   }
-  }  
-  .social-networks {
-    display: flex;
-    justify-content: space-evenly;
-    width: 300px;
-    margin-top: 1em;
-    a {
-      color: black; /* Cambia el color de los íconos a negro */
-      text-decoration: none; /* Elimina el subrayado de los enlaces */
-    }
-    i {
-      font-size: 1.5em;
-      color: inherit; /* Asegura que los íconos hereden el color del enlace */
-    }
-  }  
+}  
