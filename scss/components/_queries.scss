@@ -1,0 +1,176 @@
+/* Media Queries */
+
+/* Pequeños dispositivos (teléfonos, menos de 768px) */
+@media (max-width: 767px) {
+    .navbar {
+      font-size: 0.8rem;
+      max-width: 100%;
+    }
+  
+    .menu {
+      width: 20%;
+      display: flexbox;
+    }
+    .main {
+      grid-template-columns: 1fr;
+      text-align: center;
+      margin-top: 20px; /* Espacio arriba de la imagen */
+      img {
+        width: 50%; /* Ajustar el ancho de la imagen principal en pantallas pequeñas */
+        height: auto; /* Mantener la proporción de la imagen */
+        margin: 0 auto; /* Centrar la imagen */
+        margin-top: 10vw;
+      }
+    }
+    .wrapper {
+      max-width: 100%;
+    }
+    .about {
+      img {
+      width: 110%;
+      height: auto;
+      grid-column: 1/5;
+      p {
+        font-size: 0.5rem;
+        }
+    }
+  }
+    .portfolio .container {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px; /* Espacio arriba de las tarjetas */
+    }
+  
+    .card {
+      width: 80%; /* Ajustar el ancho de las tarjetas en pantallas pequeñas */
+      margin-bottom: 20px; /* Espacio entre las tarjetas */
+    }
+    .contact-section {
+      padding: 3em;
+      img {
+        width: 55%;
+        height: auto;
+        opacity: 0.3; /* Ajustar la opacidad */
+        margin: 20px;
+      }
+    }
+    
+    .container-contact {
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap; /* Asegurar que el contenido se ajuste en pantallas pequeñas */
+    }
+    .footer{
+      font-size: 1.5vh;
+    }
+  }
+  
+  /* Dispositivos medianos (tabletas, 768px y más) */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .navbar {
+      
+      font-size: 0.8rem;
+    }
+  
+    .menu {
+      width: 100%;
+      height: auto;
+    }
+  
+    .main {
+      grid-template-columns: 1fr 1fr;
+      img {
+        width: 100%;
+        height: auto;
+        max-width: 120%;
+      }
+    }  
+
+    .about,
+    .portfolio .container {
+      flex-direction: row;
+      align-items: center;
+    }
+  
+    .about-info {
+      padding: 4em;
+    }
+  
+    .portfolio .card {
+      flex: 0 0 calc(50% - 2em);
+      margin: 1em;
+    }
+    .contact-section {
+      padding: 3em;
+      img {
+        width: 50%;
+        height: auto;
+        opacity: 0.3; /* Ajustar la opacidad */
+        margin: 20px;
+      }
+    }
+    
+    .container-contact {
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap; /* Asegurar que el contenido se ajuste en pantallas pequeñas */
+    }
+  }
+  
+  /* Grandes dispositivos (escritorios, 1024px y más) */
+  @media (min-width: 1024px) {
+    .navbar {
+      padding: 2em;
+    }
+  
+    .menu {
+      width: 75%;
+    }
+  
+    .main {
+      grid-template-columns: 1fr 1fr;
+      img {
+        width: 70%;
+        height: auto;
+        max-width: 100%;
+      }
+    }
+  
+    .about,
+    .portfolio .container {
+      flex-direction: row;
+      align-items: center;
+    }
+  
+    .about-info {
+      grid-column: 5/10;
+      padding: 3em;
+    }
+  
+    .portfolio .card {
+      flex: 0 0 calc(33.33% - 2em);
+      margin: 1em;
+    }
+    .contact-section {
+      padding: 3em;
+      img {
+        width: 50%;
+        height: auto;
+        opacity: 0.3; /* Ajustar la opacidad */
+        margin: 40px;
+        margin-right: 10%;
+    }
+  }
+    
+    .container-contact {
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap; /* Asegurar que el contenido se ajuste en pantallas pequeñas */
+    } 
+  }

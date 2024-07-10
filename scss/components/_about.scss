@@ -1,0 +1,26 @@
+.about {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    width: 100vw;
+    align-items: center;
+    img {
+      width: 100%;
+      grid-column: 1/5;
+      margin-left: 10px;
+      padding-right: 20px;
+    }
+    p {
+      margin-bottom: 1em;
+      color: #ffffff;
+      font-weight: bold;
+    }
+  }
+  
+  .about-info {
+    grid-column: 5/10;
+    padding: 1.5em;
+    h2 {
+      font-size: 2em;
+      color: #ffffff;
+    }
+  }
