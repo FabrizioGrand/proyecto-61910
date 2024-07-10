@@ -388,7 +388,7 @@ h1 {
     height: auto;
     grid-column: 1/5;
   }
-  .about img p {
+  .about p {
     font-size: 0.5rem;
   }
   .portfolio .container {
