@@ -1,63 +1,60 @@
-  $colorfondo:#191c32;
-  $colordetalles:rgba(255, 127, 127, 0.8);
-  $colorcard:#2b3058;
-  * {
+/*VARIABLES*/
+$colorfondo:#191c32;
+$colordetalles:rgba(255, 127, 127, 0.8);
+$colorcard:#2b3058;
+/*FIN VARIABLES*/
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-
-body {
+  
+  body {
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden; /* Evitar el desbordamiento horizontal */
     background-color: $colorfondo;
   }
-  .wrapper {
-    width: 100vw;
-    height: 90vh;
-    background-color:$colorfondo;
-    color: #ffffff;
-    
-  }
-.main {
-    width: 80vw;
-    height: 70vh;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1,5em;
-    background-color: $colorfondo; /* Fondo oscuro para la sección principal */
-    padding: 60px; /* Espacio interno para la sección principal */
-    margin-left: 15%;
-    img {
-      width: 20vw; /* Ajustar el ancho de la imagen principal */
-      height: auto; /* Mantener la proporción de la imagen */
-      margin: 0 auto; /* Centrar la imagen */
-      padding-top: 15px;
-      display: block; /* Asegurar que la imagen sea un elemento de bloque */
-    }
-  }
+   
   h1 {
     font-size: 2.5em;
     padding: 4px;
   }
-  .info-content span {
-    color:$colordetalles;
-  }
-  .button-content {
-    display: flex;
-    justify-content: center;
-    margin: 1em;
-  }
   
-  .project-details-button a {
-    text-decoration: none;
-    color: #000000;
+  .wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: $colorfondo;
+    color: #ffffff;
   }
+  .main {
+    margin: 0 auto;
+    width: 80vw;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2em;
+    background-color: $colorfondo; /* Fondo oscuro para la sección principal */
+    padding: 20px; /* Espacio interno para la sección principal */
+
+    img {
+        width: 20vw; /* Ajustar el ancho de la imagen principal */
+        height: auto; /* Mantener la proporción de la imagen */
+        margin: 0 auto; /* Centrar la imagen */
+        display: block; /* Asegurar que la imagen sea un elemento de bloque */
+      }
+  }
+
   .divider {
     height: 4px;
     width: 60px;
     background-color: $colordetalles; 
     margin-top: 5px;
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
     margin-left: 5px;
   }
+  
+  
+  
+ 
+  

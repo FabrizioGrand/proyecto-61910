@@ -1,89 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-
-    <title>Portfolio Fabrizio Grand</title>
-    <link rel="stylesheet" href="../css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"
-    />
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <nav class="navbar navbar-expand-lg navbar-custom">
-          <div class="container-fluid">
-            <a class="navbar-brand brand" href="../index.html"
-              >F<span>G</span>
-            </a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav ms-auto menu">
-                <li class="nav-item">
-                  <a
-                    class="nav-link active"
-                    aria-current="page"
-                    href="../index.html"
-                    >INICIO</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./contacto.html">CONTACTO</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./portafolio.html">PORTAFOLIO</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../pages/quiensoy.html">ABOUT</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../pages/fotografia.html">FOTOGRAFIA</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </header>
-    <div class="contact-section">
-      <div class="contact-heading">
-        <h2>Contacto</h2>
-        <div class="divider"></div>
-      </div>
-      <div class="container-contact">
-        <img src="../img/fotoanimada1_n.jpg" alt="" />
-        <div class="contact-form">
-          <h4>Escriba Su Mensaje...</h4>
-          <form class="form-group">
-            <input type="text" placeholder="Nombre" class="input" />
-            <input type="email" placeholder="Email" class="input" />
-            <textarea
-              name="message"
-              placeholder="Escriba su mensaje aqui..."
-            ></textarea>
-            <button type="submit" class="download-cv" class="btn-submit">Envia Su Mensaje</button>
-          </form>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>portfolio</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"
+  />
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <nav class="navbar">
+        <div class="brand">
+          <h2>F<span>G</span></h2>
         </div>
+        <ul class="menu">
+          <li><a href="../index.html" class="active">Inicio</a></li>
+          <li><a href="./quiensoy.html" class="active">About</a></li>
+          <li><a href="./portafolio.html" class="active">Portafolio</a></li>
+          <li><a href="./fotografia.html" class="active">Fotografia</a></li>
+          <li><a href="./contacto.html" class="active">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <div class="info-content">
+        <h1>Yo soy <span>Fabrizio</span> Grand</h1>
+        <p>
+          Desde joven, me ha apasionado el mundo de las tecnologías y las
+          computadoras. Disfruto explorando nuevas herramientas y soluciones
+          tecnológicas.
+        </p>
+        <a download href="#"
+          ><button class="download-cv">Descargar CV</button></a
+        >
       </div>
+<<<<<<< HEAD
     </div>
 
     <footer class="footer">
@@ -104,3 +58,42 @@
     ></script>
   </body>
 </html>
+=======
+      <img src="../img/fotoanimada2defrente_n.jpg" alt="" />
+    </main>
+  </div>
+  <div class="contact-section">
+    <div class="contact-heading">
+      <h2>Contacto</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="container-contact">
+      <img src="../img/fotoanimada1_n.jpg" alt="" />
+      <div class="contact-form">
+        <h4>Escriba Su Mensaje...</h4>
+        <form class="form-group">
+          <input type="text" placeholder="Nombre" class="input" />
+          <input type="email" placeholder="Email" class="input" />
+          <textarea
+            name="message"
+            placeholder="Escriba su mensaje aqui..."
+          ></textarea>
+          <button type="submit" class="btn-submit" class="download-cv">Envia Su Mensaje</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <h2>Fabrizio Grand</h2>
+      <h5>Desarrolador Frontend</h5>
+    </div>
+    <div class="sotial-networks">
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-linkedin"></i>
+      <i class="fab fa-twitter-square"></i>
+    </div>
+  </footer>
+</body>
+>>>>>>> temp-branch

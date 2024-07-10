@@ -1,0 +1,55 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Alinear verticalmente los elementos */
+    transition: all 0.3s ease; /* Transición para el contenedor */
+  }
+  
+  .brand {
+    margin-top: -7px;
+  }
+  
+  .brand span {
+    color:$colordetalles; /* Cambiado a rojo clarito */
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: flex-end; /* Alinear el menú a la derecha */
+    gap: 15px; /* Reducir el espacio entre los elementos del menú */
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan si es necesario */
+    li {
+      list-style: none;
+      transition: transform 0.3s ease; /* Transición para los elementos del menú */
+    }
+    a {
+      color: #ffffff; /* Ajustar el color de los enlaces del menú */
+      text-decoration: none;
+      padding: 5px 15px; /* Reducir el padding */
+      text-transform: uppercase; /* Convertir el texto a mayúsculas */
+      font-weight: 700; /* Poner el texto en negrita */
+      transition: color 0.4s ease, background-color 0.3s ease; /* Transición para color y fondo */
+      border-radius: 20px;
+    }
+    .active {
+      color: #ffffff;
+    }
+  }
+  
+  .menu li {
+    list-style: none;
+    transition: transform 0.3s ease; /* Transición para los elementos del menú */
+  }
+    
+  .menu li:hover a {
+    background-color: rgba(255, 127, 127, 0.8); /* Cambiado a rojo clarito */
+    color: #000; /* Ajustar el color del texto en hover */
+    border-radius: 20px;
+  }  
+  .menu li a:hover {
+    color: #000; /* Ajustar el color del texto en hover */
+  }
+  
+  .menu li:hover {
+    transform: scale(1.2); /* Agranda las opciones del menú */
+  }

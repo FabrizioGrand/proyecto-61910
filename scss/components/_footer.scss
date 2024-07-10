@@ -1,26 +1,24 @@
+/* Estilos para el footer */
 .footer {
-    width: 100vw;
-    height: 150px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    background-color:$colordetalles;
+    align-items: center;
+    width: 100vw;
+    height: 200px;
     padding: 2em;
-    color: black;
-    p {
-      font-weight: bold;
-    }
+    background-color: $colordetalles; 
   }
   
-  .footer-content h2 {
-    font-size: 2.5em;
-  }
-  
-  .footer-content h5 {
+  .footer-content {
+    h2 {
+      font-size: 3em;
+   }  
+   h5 {
     font-size: 1.5em;
     text-align: center;
   }
+  }  
   .social-networks {
     display: flex;
     justify-content: space-evenly;
@@ -34,4 +32,4 @@
       font-size: 1.5em;
       color: inherit; /* Asegura que los íconos hereden el color del enlace */
     }
-  } 
+  }  
